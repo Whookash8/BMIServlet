@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 
 public class BMIServlet extends HttpServlet {
     @Override
@@ -22,7 +23,7 @@ public class BMIServlet extends HttpServlet {
         try{
             double height = Integer.parseInt(req.getParameter("height"));
             double weight = Integer.parseInt(req.getParameter("weight"));
-            double bmi = weight/(height*height/10000.0);
+            String bmi = new DecimalFormat("##.##").format(weight/(height*height/10000.0));
             req.setAttribute("bmi", bmi);
             req.getRequestDispatcher("/showBMI.jsp").forward(req, resp);
         } finally {
