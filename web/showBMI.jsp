@@ -12,7 +12,7 @@
     <title>Calculated BMI</title>
 </head>
 <body>
-    <h1>Your BMI is <%= request.getAttribute("bmi")%></h1>
+    <h1>Your BMI is ${requestScope.bmi}</h1>
     <a href="index.jsp">
         <button>Back</button>
     </a>
