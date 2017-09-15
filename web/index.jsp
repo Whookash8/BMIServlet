@@ -8,9 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>BMI Servlet</title>
   </head>
   <body>
-  $END$
+  <h1>BMI Calculator</h1>
+  <form action="bmi.do">
+    <p>Enter your height in cm: </p>
+    <input type="number" name="height" />
+    <p>Enter your weight in kg: </p>
+    <input type="number" name="weight" />
+    <br />
+    <input type="submit" value="Calculate" />
+  </form>
   </body>
 </html>
